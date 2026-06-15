@@ -1,0 +1,410 @@
+/* ================= HERO ================= */
+
+.ab-hero {
+  background: linear-gradient(135deg, var(--bg-light) 0%, #eef0f8 100%);
+  padding: 120px 20px;
+}
+
+.ab-hero h1 {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: var(--text-dark);
+}
+
+.ab-purple {
+  color: #7c5cbf;
+}
+
+.ab-orange {
+  color: var(--primary-orange);
+}
+
+.ab-hero-sub {
+  color: var(--text-gray);
+  font-size: 1.05rem;
+  margin-top: 12px;
+}
+
+.ab-btn-assess {
+  background: var(--primary-orange);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 28px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.ab-btn-assess:hover {
+  background: #d97706;
+}
+
+/* ================= DARK BANNER ================= */
+
+.ab-dark-banner {
+  background: var(--dark-blue);
+  padding: 80px 20px;
+}
+
+.ab-sub {
+  font-size: 1rem;
+  color: #cdd;
+}
+
+.ab-banner-h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-orange);
+  font-style: italic;
+}
+
+.ab-right-text {
+  color: #c8cfe8;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.ab-btn-assess-dark {
+  background: var(--primary-orange);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.ab-btn-assess-dark:hover {
+  background: #d97706;
+}
+
+/* ================= PROMISE ================= */
+
+.ab-promise {
+  background: var(--dark-blue);
+  padding: 60px 20px;
+  border-top: 1px solid #253070;
+}
+
+.ab-promise-label {
+  font-size: 0.7rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.ab-promise-title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.ab-promise-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ab-promise-tag {
+  background: #253070;
+  color: #d0d5f5;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+/* ================= QUOTE ================= */
+
+.ab-quote {
+  background: var(--bg-card);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.ab-blockquote {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  font-style: italic;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.ab-quote-body {
+  color: var(--text-gray);
+  font-size: 0.97rem;
+}
+
+/* ================= HOW WE TEACH ================= */
+
+.ab-teach {
+  background: var(--bg-card);
+  padding: 80px 20px;
+}
+
+.ab-section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.ab-title-underline {
+  width: 48px;
+  height: 4px;
+  background: var(--primary-orange);
+  border-radius: 2px;
+}
+
+.ab-teach-card {
+  background: var(--bg-light);
+  border-radius: var(--border-radius);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.ab-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #e8eaf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  font-size: 1.1rem;
+}
+
+.ab-teach-card h5 {
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 1rem;
+}
+
+.ab-teach-card p {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.ab-teach-img {
+  border-radius: 16px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 340px;
+}
+
+/* ================= RESULTS ================= */
+
+.ab-results {
+  background: #f4f5fb;
+  padding: 80px 20px;
+}
+
+.ab-section-title-left {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.ab-underline-orange {
+  width: 40px;
+  height: 4px;
+  background: var(--primary-orange);
+  border-radius: 2px;
+}
+
+.ab-underline-purple {
+  width: 40px;
+  height: 4px;
+  background: #7c5cbf;
+  border-radius: 2px;
+}
+
+.ab-results-card {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: 22px;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+}
+
+.ab-review-card {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+}
+
+.ab-stat {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.ab-stat-label {
+  color: var(--text-gray);
+  font-size: 0.82rem;
+}
+
+.ab-quote-mark {
+  color: #7c5cbf;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.ab-review-card p {
+  color: var(--text-dark);
+  font-size: 0.9rem;
+  margin: 4px 0 8px;
+}
+
+.ab-stars {
+  color: var(--primary-orange);
+  font-size: 1rem;
+}
+
+.ab-reviewer {
+  color: var(--text-light);
+  font-size: 0.82rem;
+  margin-top: 4px;
+}
+
+/* ================= APPROACH HERO ================= */
+
+.ab-approach-hero {
+  background: var(--bg-light);
+  padding: 120px 20px;
+}
+
+.ab-badge-pill {
+  background: #e8eaf8;
+  color: #7c5cbf;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.ab-approach-h2 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+.ab-approach-sub {
+  color: var(--text-gray);
+  font-size: 0.97rem;
+  margin-top: 12px;
+}
+
+.ab-tagline {
+  color: #7c5cbf;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 16px;
+  font-size: 0.97rem;
+}
+
+.ab-approach-img {
+  border-radius: 16px;
+  width: 100%;
+  object-fit: cover;
+  height: 380px;
+}
+
+.ab-quote-bubble {
+  background: var(--dark-blue);
+  color: #fff;
+  border-radius: 12px;
+  padding: 18px 20px;
+  position: absolute;
+  bottom: 30px;
+  left: -20px;
+  width: 230px;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+/* ================= 5-STEP ================= */
+
+.ab-steps {
+  background: var(--bg-card);
+  padding: 80px 20px;
+}
+
+.ab-step-col {
+  flex: 1;
+  min-width: 140px;
+}
+
+.ab-step-num {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1rem;
+  margin: 0 auto 12px;
+}
+
+.ab-step-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  font-size: 1.5rem;
+}
+
+.ab-step-title {
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--text-dark);
+}
+
+.ab-step-desc {
+  color: var(--text-gray);
+  font-size: 0.8rem;
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .ab-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .ab-approach-h2 {
+    font-size: 1.8rem;
+  }
+
+  .ab-quote-bubble {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .ab-steps .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+}
