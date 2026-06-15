@@ -5,14 +5,8 @@ import Hero from './components/Hero';
 import Purpose from './components/Purpose';
 import Beliefs from './components/Beliefs';
 import MissionVision from './components/MissionVision';
-import HeroSection from './components/sections/HeroSection';
-import DarkBanner from './components/sections/DarkBanner';
-import PromiseBar from './components/sections/PromiseBar';
-import QuoteSection from './components/sections/QuoteSection';
-import HowWeTeach from './components/sections/HowWeTeach';
-import ResultsAndReviews from './components/sections/ResultsAndReviews';
-import ApproachHero from './components/sections/ApproachHero';
-import FiveSteps from './components/sections/FiveSteps';
+import { Routes, Route } from 'react-router-dom';
+import Approach from './Approach';
 
 function App() {
   useEffect(() => {
@@ -24,21 +18,25 @@ function App() {
     });
   }, []);
 
-  return (
+return (
     <div className="App">
       <Navbar />
-      <Hero />
-      <Purpose />
-      <Beliefs />
-    <ApproachHero />
-      <FiveSteps />
-      <HowWeTeach />
-      <ResultsAndReviews />
-        <HeroSection />
-      <DarkBanner />
-      <PromiseBar />
-            <QuoteSection />
-<MissionVision />
+
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <Purpose />
+              <Beliefs />
+              <MissionVision />
+            </>
+          }
+        />
+
+        <Route path="/approach" element={<Approach />} />
+      </Routes>
     </div>
   );
 }
