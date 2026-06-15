@@ -7,6 +7,7 @@ import Beliefs from './components/Beliefs';
 import MissionVision from './components/MissionVision';
 import { Routes, Route } from 'react-router-dom';
 import Approach from './Approach';
+import About from './About';
 
 function App() {
   useEffect(() => {
@@ -27,15 +28,13 @@ return (
           path="/"
           element={
             <>
-              <Hero />
-              <Purpose />
-              <Beliefs />
-              <MissionVision />
+              <About/>
             </>
           }
         />
 
         <Route path="/approach" element={<Approach />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </div>
   );
