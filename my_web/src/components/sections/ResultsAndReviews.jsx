@@ -10,8 +10,8 @@ function ResultsAndReviews() {
   ];
 
   const reviews = [
-    { text: 'My child went from struggling in Math to scoring an A!', author: 'Parent' },
-    { text: 'Lessons are easy to understand and fun!', author: 'Student' },
+    { text: 'My child went from struggling in Math to scoring an A! The tutors are patient and truely care about their progress.', author: 'Parent of Sec 2 Student' },
+    { text: 'Lessons are easy to understand and fun! I feel more confident in exams now.', author: 'Sec 4 Student' },
   ];
 
   return (

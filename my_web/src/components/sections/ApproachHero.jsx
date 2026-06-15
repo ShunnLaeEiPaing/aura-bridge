@@ -10,7 +10,9 @@ function ApproachHero() {
           <div className="col-lg-6">
             <span className="ab-badge-pill">Our Approach</span>
             <h2 className="ab-approach-h2">How We Bridge <span className="ab-orange">the Gap</span></h2>
-            <p className="ab-approach-sub">We go beyond teaching...</p>
+            <p className="ab-approach-sub">We go beyond teaching. Our proven approach helps students understand better, build confidence, 
+              and achieve lasting results.
+            </p>
             <p className="ab-tagline">Understand. Apply. Achieve.</p>
           </div>
 
@@ -22,7 +24,7 @@ function ApproachHero() {
             />
 
             <div className="ab-quote-bubble">
-              <strong>A great teacher</strong> explains. <strong>A relatable teacher</strong> connects. <strong>A caring teacher</strong> empowers.
+              <strong>A great teacher</strong> explains.<br></br> <strong>A relatable teacher</strong> connects. <br></br><strong>A caring teacher</strong> empowers.
             </div>
           </div>
         </div>
