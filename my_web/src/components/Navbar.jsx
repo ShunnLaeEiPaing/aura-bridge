@@ -31,7 +31,7 @@ const Navbar = () => {
         <BsNavbar.Collapse id="navbar-nav">
           <Nav className="ms-auto align-items-lg-center">
             <Nav.Link as={Link} to="/about" className="nav-link-custom">About Us</Nav.Link>
-            <Nav.Link href="#programme" className="nav-link-custom">Programme</Nav.Link>
+            <Nav.Link as={Link} to="/programme" className="nav-link-custom">Programme</Nav.Link>
             <Nav.Link as={Link} to="/approach" className="nav-link-custom">
             Our Approach
             </Nav.Link>

@@ -8,6 +8,8 @@ import MissionVision from './components/MissionVision';
 import { Routes, Route } from 'react-router-dom';
 import Approach from './Approach';
 import About from './About';
+import Programme from './components/Programme';
+import Footer from './components/layout/FooterCTA';
 
 function App() {
   useEffect(() => {
@@ -35,7 +37,9 @@ return (
 
         <Route path="/approach" element={<Approach />} />
         <Route path="/about" element={<About />} />
+        <Route path="/programme" element={<Programme />} />
       </Routes>
+      <Footer/>
     </div>
   );
 }
