@@ -36,6 +36,7 @@ const programmePillars = [
     subtitle: "P3 - P6",
     title: "Primary School",
     tags: ["English", "Math", "Science"],
+    target: "primary-fees",
     description:
       "Build strong foundations, deepen understanding and develop exam confidence through guided practice and engaging lessons.",
   },
@@ -44,6 +45,7 @@ const programmePillars = [
     subtitle: "Sec 1 - Sec 4",
     title: "Secondary School",
     tags: ["English", "Math", "Science"],
+    target: "secondary-fees",
     description:
       "Strengthen core concepts, master advanced exam techniques, and achieve consistently better results across all subjects.",
   },
@@ -52,6 +54,7 @@ const programmePillars = [
     subtitle: "Crash Courses & Intensive",
     title: "Exam Preparation",
     tags: ["PSLE", "O-Level"],
+    target: "exam-fees",
     description:
       "Targeted revision programmes with timed practices, past-paper drills, and proven strategies to boost final performance.",
   },
@@ -60,6 +63,7 @@ const programmePillars = [
     subtitle: "Assessments",
     title: "Mock Exams",
     tags: ["Detailed Analysis", "Feedback"],
+    target: "exam-fees",
     description:
       "Simulate real exam conditions, receive detailed performance breakdowns, and get personalised feedback to close learning gaps.",
   },
@@ -273,7 +277,7 @@ const Programme = () => {
 
                     <p className="pillar-description">{item.description}</p>
 
-                    <a href="#enquire" className="learn-more-link">
+                    <a href={`#${item.target}`} className="learn-more-link">
                       LEARN MORE <BsArrowRight />
                     </a>
                   </Card.Body>
@@ -320,7 +324,7 @@ const Programme = () => {
 
           <div className="fees-grid">
 
-            <div className="fees-card">
+            <div className="fees-card" id='primary-fees'>
               <ProgrammeTable
                 icon={<BsMortarboardFill />}
                 title="Primary School Programmes"
@@ -329,7 +333,7 @@ const Programme = () => {
               />
             </div>
 
-            <div className="fees-card">
+            <div className="fees-card" id='secondary-fees'>
               <ProgrammeTable
                 icon={<BsBookFill />}
                 title="Secondary School Programmes"
@@ -338,7 +342,7 @@ const Programme = () => {
               />
             </div>
 
-            <div className="fees-card">
+            <div className="fees-card" id='exam-fees'>
               <ProgrammeTable
                 icon={<BsBullseye />}
                 title="Exam Preparation Programmes"
