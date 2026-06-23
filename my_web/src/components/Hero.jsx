@@ -64,7 +64,7 @@ const Hero = () => {
           <Col lg={6} className="mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
             <div className="hero-image-wrapper">
               <img 
-                src="./teacher.png"
+                src="./about.png"
                 alt="Student learning with tutor"
                 className="hero-image"
               />

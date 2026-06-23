@@ -27,6 +27,8 @@ import {
 } from "react-icons/bs";
 import './programme.css';
 import Footer from "./layout/FooterCTA";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const programmePillars = [
   {
@@ -168,8 +170,16 @@ const ProgrammeTable = ({ icon, title, columns, rows }) => {
 };
 
 const Programme = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#enquire") {
+      const element = document.getElementById("enquire");
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
   return (
-    <section className="our-programme-section">
+    <section className="our-programme-section mt-5">
       <Container>
         {/* Top Hero Section */}
         <div className="programme-hero-section">
@@ -211,7 +221,7 @@ const Programme = () => {
             <Col lg={6} data-aos="fade-left">
               <div className="programme-hero-image-wrap">
                 <img
-                  src="./programme.png"
+                  src="./program.png"
                   alt="Student studying"
                   className="programme-hero-image"
                 />
@@ -389,79 +399,79 @@ const Programme = () => {
 
           </div>
           <div className="enquiry-form-card mx-auto">
-              <Form>
-                {/* Name */}
-                <Form.Group className="mb-3">
-                  <Form.Label className="mini-label text-start">Name</Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="John Tan"
-                    className="custom-input"
-                    required
-                  />
-                </Form.Group>
+            <Form>
+              {/* Name */}
+              <Form.Group className="mb-3">
+                <Form.Label className="mini-label text-start">Name</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="John Tan"
+                  className="custom-input"
+                  required
+                />
+              </Form.Group>
 
-                {/* Mobile Number */}
-                <Form.Group className="mb-3">
-                  <Form.Label className="mini-label text-start">Mobile Number</Form.Label>
-                  <Form.Control
-                    type="tel"
-                    placeholder="e.g. 8080 9898"
-                    className="custom-input"
-                    required
-                  />
-                </Form.Group>
+              {/* Mobile Number */}
+              <Form.Group className="mb-3">
+                <Form.Label className="mini-label text-start">Mobile Number</Form.Label>
+                <Form.Control
+                  type="tel"
+                  placeholder="e.g. 8080 9898"
+                  className="custom-input"
+                  required
+                />
+              </Form.Group>
 
-                {/* Email */}
-                <Form.Group className="mb-3">
-                  <Form.Label className="mini-label text-start">Email</Form.Label>
-                  <Form.Control
-                    type="email"
-                    placeholder="example@mail.com"
-                    className="custom-input"
-                    required
-                  />
-                </Form.Group>
+              {/* Email */}
+              <Form.Group className="mb-3">
+                <Form.Label className="mini-label text-start">Email</Form.Label>
+                <Form.Control
+                  type="email"
+                  placeholder="example@mail.com"
+                  className="custom-input"
+                  required
+                />
+              </Form.Group>
 
-                {/* Courses */}
-                <Form.Group className="mb-3">
-                  <Form.Label className="mini-label text-start">Courses</Form.Label>
-                  <Form.Select className="custom-input" required>
-                    <option>Select a Course</option>
-                    <option>Primary School</option>
-                    <option>Secondary School</option>
-                    <option>Exam Preparation</option>
-                  </Form.Select>
-                </Form.Group>
+              {/* Courses */}
+              <Form.Group className="mb-3">
+                <Form.Label className="mini-label text-start">Courses</Form.Label>
+                <Form.Select className="custom-input" required>
+                  <option>Select a Course</option>
+                  <option>Primary School</option>
+                  <option>Secondary School</option>
+                  <option>Exam Preparation</option>
+                </Form.Select>
+              </Form.Group>
 
-                {/* Children Education Level */}
-                <Form.Group className="mb-3">
-                  <Form.Label className="mini-label text-start">Your Children Education Level</Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Pri 1 - JC"
-                    className="custom-input"
-                    required
-                  />
-                </Form.Group>
+              {/* Children Education Level */}
+              <Form.Group className="mb-3">
+                <Form.Label className="mini-label text-start">Your Children Education Level</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Pri 1 - JC"
+                  className="custom-input"
+                  required
+                />
+              </Form.Group>
 
-                {/* Additional Information */}
-                <Form.Group className="mb-4">
-                  <Form.Label className="mini-label text-start">Additional Information</Form.Label>
-                  <Form.Control
-                    as="textarea"
-                    rows={4}
-                    placeholder="Write your message..."
-                    className="custom-input"
-                  />
-                </Form.Group>
+              {/* Additional Information */}
+              <Form.Group className="mb-4">
+                <Form.Label className="mini-label text-start">Additional Information</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={4}
+                  placeholder="Write your message..."
+                  className="custom-input"
+                />
+              </Form.Group>
 
-                {/* Submit Button */}
-                <Button className="enquire-btn w-100">
-                  Submit <BsSend />
-                </Button>
-              </Form>
-            </div>
+              {/* Submit Button */}
+              <Button className="enquire-btn w-100">
+                Submit <BsSend />
+              </Button>
+            </Form>
+          </div>
         </div>
 
         {/* Final CTA Banner */}

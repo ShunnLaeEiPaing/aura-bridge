@@ -3,7 +3,7 @@ import {Container} from 'react-bootstrap';
 
 function HeroSection() {
   return (
-    <section className="ab-hero">
+    <section className="ab-hero" data-aos="fade-up">
       <Container>
       <div className="container text-center">
         <h1>Let's Bridge the Gap. <span className="ab-purple">Together.</span></h1>

@@ -22,7 +22,7 @@ const Purpose = () => {
         </Row>
         
         <Row className="align-items-start">
-          <Col lg={6} className="mb-4 mb-lg-0" data-aos="fade-right">
+          <Col lg={6} className="mt-5 mb-lg-0" data-aos="fade-right">
             <p className="purpose-text">
               Yet many students struggle not because they are incapable, but 
               because there is a gap between what is taught and what is truly 
@@ -44,13 +44,17 @@ const Purpose = () => {
               every student become the best version of themselves.
             </p>
             
-            <img 
+            {/* <img 
               src="./students.png"
               alt="Student studying"
               className="purpose-image d-none d-lg-block"
               data-aos="zoom-in"
               data-aos-delay="300"
-            />
+            /> */}
+            <p className="purpose-text mt-5">
+              At Aura Bridge, we don't believe in memorising answers. We focus on every students understand why. When understanding improves,
+              confidence grows.
+            </p>
           </Col>
           
           <Col lg={6} data-aos="fade-left" data-aos-delay="200">

@@ -52,14 +52,11 @@ body {
   gap: 0.5rem;
 }
 
-.brand-icon {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.logo-image {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 .nav-link-custom {
@@ -121,7 +118,7 @@ body {
   align-items: center;
   gap: 0.5rem;
   background: rgba(67, 97, 238, 0.1);
-  color: var(--primary-blue);
+  color: var(--dark-blue);
   padding: 0.5rem 1rem;
   border-radius: 25px;
   font-size: 0.9rem;
@@ -158,14 +155,13 @@ body {
 
 .hero-description {
   font-size: 1.1rem;
-  color: var(--text-gray);
   margin-bottom: 2rem;
   max-width: 500px;
   line-height: 1.8;
 }
 
 .btn-assessment {
-  background: var(--primary-blue);
+  background: var(--dark-blue);
   color: #ffffff;
   border: none;
   border-radius: 30px;
@@ -234,9 +230,20 @@ body {
   transform: scale(1.1);
 }
 
-.feature-icon.purple { background: rgba(139, 92, 246, 0.1); color: #8b5cf6; }
-.feature-icon.blue { background: rgba(59, 130, 246, 0.1); color: #3b82f6; }
-.feature-icon.indigo { background: rgba(99, 102, 241, 0.1); color: #6366f1; }
+.feature-icon.purple {
+  background: rgba(139, 92, 246, 0.1);
+  color: #8b5cf6;
+}
+
+.feature-icon.blue {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.feature-icon.indigo {
+  background: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+}
 
 .feature-item span {
   font-size: 0.85rem;
@@ -247,17 +254,13 @@ body {
 
 /* Hero Image */
 .hero-image-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
+  text-align: right;
 }
 
 .hero-image {
   width: 100%;
-  max-width: 600px;
-  border-radius: 50px;
-  box-shadow: var(--shadow-lg);
-  object-fit: cover;
+  max-width: 800px; 
+  height: auto;
 }
 
 .trust-badge {
@@ -275,8 +278,15 @@ body {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .trust-icon {
@@ -329,7 +339,6 @@ body {
 }
 
 .purpose-text {
-  color: var(--text-gray);
   font-size: 1.1rem;
   line-height: 1.9;
   margin-bottom: 1.8rem;
@@ -342,17 +351,6 @@ body {
   font-size: 1.3rem;
   margin-bottom: 1.8rem;
   position: relative;
-}
-
-.purpose-highlight::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 100%;
-  height: 4px;
-  background: var(--primary-orange);
-  border-radius: 10px;
 }
 
 .mission-statement {
@@ -401,7 +399,6 @@ body {
 }
 
 .story-card p {
-  color: var(--text-gray);
   font-size: 1.05rem;
   line-height: 1.9;
   margin-bottom: 1.3rem;
@@ -486,11 +483,9 @@ body {
 /* ===== BELIEFS SECTION ===== */
 .beliefs-section {
   padding: 120px 0;
-  background: linear-gradient(
-    to bottom,
-    #ffffff 0%,
-    #f8fafc 100%
-  );
+  background: linear-gradient(to bottom,
+      #ffffff 0%,
+      #f8fafc 100%);
 }
 
 .belief-card {
@@ -512,11 +507,9 @@ body {
   left: 0;
   width: 100%;
   height: 5px;
-  background: linear-gradient(
-    90deg,
-    var(--primary-blue),
-    var(--primary-orange)
-  );
+  background: linear-gradient(90deg,
+      var(--primary-blue),
+      var(--primary-orange));
 }
 
 .belief-card:hover {
@@ -575,7 +568,6 @@ body {
 }
 
 .belief-card p {
-  color: var(--text-gray);
   font-size: 1rem;
   line-height: 1.8;
   margin: 0;
@@ -701,11 +693,6 @@ body {
   font-weight: 500;
 }
 
-/* Vision text = softer + readable */
-.vision-card p {
-  color: var(--text-gray);
-}
-
 /* =========================
    VALUES CARD
 ========================= */
@@ -801,7 +788,6 @@ body {
 
 .value-content p {
   font-size: 0.95rem;
-  color: var(--text-gray);
   margin: 0;
   line-height: 1.6;
 }
@@ -811,6 +797,7 @@ body {
 ========================= */
 
 @media (max-width: 768px) {
+
   .mission-card,
   .values-card {
     padding: 2rem;
@@ -873,11 +860,30 @@ body {
   transform: scale(1.1);
 }
 
-.value-icon.blue { background: rgba(59, 130, 246, 0.1); color: #3b82f6; }
-.value-icon.green { background: rgba(16, 185, 129, 0.1); color: #10b981; }
-.value-icon.yellow { background: rgba(245, 158, 11, 0.1); color: #f59e0b; }
-.value-icon.purple { background: rgba(139, 92, 246, 0.1); color: #8b5cf6; }
-.value-icon.pink { background: rgba(236, 72, 153, 0.1); color: #ec4899; }
+.value-icon.blue {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.value-icon.green {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.value-icon.yellow {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.value-icon.purple {
+  background: rgba(139, 92, 246, 0.1);
+  color: #8b5cf6;
+}
+
+.value-icon.pink {
+  background: rgba(236, 72, 153, 0.1);
+  color: #ec4899;
+}
 
 .value-content h5 {
   font-size: 1rem;
@@ -888,7 +894,6 @@ body {
 
 .value-content p {
   font-size: 0.9rem;
-  color: var(--text-gray);
   margin: 0;
 }
 
@@ -897,11 +902,11 @@ body {
   .hero-title {
     font-size: 2.5rem;
   }
-  
+
   .hero-features {
     justify-content: center;
   }
-  
+
   .hero-image-wrapper {
     margin-top: 3rem;
   }
@@ -915,7 +920,7 @@ body {
     bottom: 10px;
     padding: 10px 16px;
   }
-  
+
   .section-title {
     font-size: 2.25rem;
   }
@@ -925,36 +930,36 @@ body {
   .hero-section {
     padding-top: 80px;
   }
-  
+
   .hero-title {
     font-size: 2rem;
   }
-  
+
   .section-title {
     font-size: 1.85rem;
   }
-  
+
   .bridge-items {
     grid-template-columns: 1fr;
   }
-  
+
   .nav-link-custom {
     margin: 0.5rem 0;
   }
-  
+
   .navbar-custom {
     padding: 0.75rem 1rem;
   }
-  
+
   .hero-features {
     gap: 0.75rem;
   }
-  
+
   .feature-item {
     min-width: 100px;
     padding: 1rem;
   }
-  
+
   .purpose-section,
   .beliefs-section,
   .mission-section {
@@ -966,16 +971,16 @@ body {
   .hero-title {
     font-size: 1.75rem;
   }
-  
+
   .hero-description {
     font-size: 1rem;
   }
-  
+
   .btn-assessment {
     padding: 0.85rem 1.5rem;
     font-size: 0.95rem;
   }
-  
+
   .story-card {
     padding: 1.5rem;
   }

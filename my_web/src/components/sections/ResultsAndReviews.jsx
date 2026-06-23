@@ -19,7 +19,7 @@ function ResultsAndReviews() {
       <Container>
       <div className="container-fluid px-5">
         <div className="row g-5">
-          <div className="col-lg-6">
+          <div className="col-lg-6" data-aos="fade-right">
             <h3 className="ab-section-title-left">Results That Matter</h3>
             <div className="ab-underline-orange mb-4"></div>
 
@@ -38,7 +38,7 @@ function ResultsAndReviews() {
             </div>
           </div>
 
-          <div className="col-lg-6">
+          <div className="col-lg-6" data-aos="fade-left">
             <h3 className="ab-section-title-left">What Parents & Students Say</h3>
             <div className="ab-underline-purple mb-4"></div>
 

@@ -17,12 +17,17 @@ const Navbar = () => {
   return (
     <BsNavbar 
       expand="lg" 
+      fixed="top"
       className={`navbar-custom ${scrolled ? 'scrolled' : ''}`}
     >
       <Container>
         <BsNavbar.Brand href="#" className="navbar-brand-custom">
           <div className="brand-icon">
-            <FaBook color="#fff" size={18} />
+            <img 
+                src="./logo.jpg"
+                alt="logo"
+                className="logo-image"
+              />
           </div>
         </BsNavbar.Brand>
         

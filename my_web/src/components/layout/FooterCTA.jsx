@@ -3,6 +3,7 @@ import { BsArrowRight } from "react-icons/bs";
 import { Button } from "react-bootstrap";
 import "./footer.css";
 import { FaInstagram, FaTiktok } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -17,7 +18,11 @@ function Footer() {
         <p className="cta-subtext">
           Join students who have transformed their academic journey. Enrol today.
         </p>
-        <Button className="cta-yellow-btn" href="#enquire">
+        <Button
+          as={Link}
+          to="/programme#enquire"
+          className="cta-yellow-btn"
+        >
           ENROL NOW <BsArrowRight />
         </Button>
         <div className="social-icons mt-5">

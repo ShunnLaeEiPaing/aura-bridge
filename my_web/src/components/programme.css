@@ -189,6 +189,7 @@ body {
   align-items: center;
   gap: 12px;
   min-width: 210px;
+  animation: float 3s ease-in-out infinite;
 }
 
 .students-badge-icon {

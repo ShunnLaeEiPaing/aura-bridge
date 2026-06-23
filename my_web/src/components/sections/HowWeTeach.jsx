@@ -12,12 +12,12 @@ function HowWeTeach() {
   return (
     <section className="ab-teach">
       <Container>
-      <div className="container-fluid px-5">
-        <h2 className="ab-section-title">How We Teach</h2>
+      <div className="container-fluid px-5" >
+        <h2 className="ab-section-title" data-aos="fade-up">How We Teach</h2>
         <div className="ab-title-underline mx-auto mb-5"></div>
 
         <div className="row g-4 align-items-stretch">
-          <div className="col-lg-6">
+          <div className="col-lg-6" data-aos="fade-right">
             <div className="row g-4">
               {cards.map((c, i) => (
                 <div key={i} className="col-md-6">
@@ -33,7 +33,7 @@ function HowWeTeach() {
             </div>
           </div>
 
-          <div className="col-lg-6">
+          <div className="col-lg-6" data-aos="fade-left">
             <img
               src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=700&q=80"
               alt="Classroom"
