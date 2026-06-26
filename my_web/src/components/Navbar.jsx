@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Nav, Navbar as BsNavbar } from 'react-bootstrap';
 import { FaBook } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import '../css/nav.css';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);

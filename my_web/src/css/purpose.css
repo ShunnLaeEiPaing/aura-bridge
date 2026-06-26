@@ -1,0 +1,221 @@
+/* ===== PURPOSE SECTION ===== */
+
+.purpose-section {
+  padding: 120px 0;
+  background: var(--bg-light);
+}
+
+.section-tag {
+  display: inline-block;
+  background: rgba(67, 97, 238, 0.1);
+  color: var(--primary-blue);
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+.purpose-text {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  margin-bottom: 1.8rem;
+}
+
+.purpose-highlight {
+  display: inline-block;
+  color: var(--primary-blue);
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 1.8rem;
+}
+
+.mission-statement {
+  background: #fff;
+  border-left: 5px solid var(--primary-orange);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-radius: 0 16px 16px 0;
+  color: var(--text-dark);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.mission-statement strong {
+  color: var(--primary-blue);
+}
+
+/* Story Card */
+
+.story-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: var(--shadow-md);
+  height: 100%;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.story-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+}
+
+.story-card h3::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: var(--primary-orange);
+  border-radius: 20px;
+  margin-top: 0.8rem;
+}
+
+.story-card p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.highlight-word {
+  color: var(--primary-blue);
+  font-weight: 700;
+}
+
+/* Bridge Items */
+
+.bridge-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.bridge-item {
+  background: #fdf8f1;
+  border: 1px solid rgba(249,168,38,0.15);
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 0.75rem;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.bridge-item::before {
+  content: "✓";
+  width: 24px;
+  height: 24px;
+  background: var(--primary-orange);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.purpose-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  margin-top: 2rem;
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== TABLET ===== */
+
+@media (max-width: 992px) {
+  .purpose-section {
+    padding: 80px 0;
+  }
+
+  .section-title {
+    font-size: 2.4rem;
+  }
+
+  .story-card {
+    margin-top: 2rem;
+  }
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+
+  .purpose-section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .purpose-text {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .purpose-highlight {
+    font-size: 1.15rem;
+  }
+
+  .mission-statement {
+    padding: 1.25rem;
+    font-size: 1rem;
+  }
+
+  .story-card {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .story-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .story-card p {
+    font-size: 0.95rem;
+  }
+
+  .bridge-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== SMALL PHONES ===== */
+
+@media (max-width: 576px) {
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .section-tag {
+    font-size: 0.8rem;
+  }
+
+  .purpose-highlight {
+    font-size: 1rem;
+  }
+
+  .story-card {
+    padding: 1.25rem;
+  }
+
+  .bridge-item {
+    font-size: 0.9rem;
+  }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaHeart, FaGlobe, FaHandshake, FaShieldAlt, FaRocket } from 'react-icons/fa';
+import '../css/belief.css';
 
 const Beliefs = () => {
   const beliefs = [

@@ -25,9 +25,9 @@ import {
   BsPeopleFill,
   BsMortarboard
 } from "react-icons/bs";
-import './programme.css';
+import '../css/programme.css';
 import Footer from "./layout/FooterCTA";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 const programmePillars = [
@@ -35,7 +35,7 @@ const programmePillars = [
     id: "01",
     subtitle: "P3 - P6",
     title: "Primary School",
-    tags: ["English", "Math", "Science"],
+    tags: ["English", "Math"],
     target: "primary-fees",
     description:
       "Build strong foundations, deepen understanding and develop exam confidence through guided practice and engaging lessons.",
@@ -44,7 +44,7 @@ const programmePillars = [
     id: "02",
     subtitle: "Sec 1 - Sec 4",
     title: "Secondary School",
-    tags: ["English", "Math", "Science"],
+    tags: ["English", "Math"],
     target: "secondary-fees",
     description:
       "Strengthen core concepts, master advanced exam techniques, and achieve consistently better results across all subjects.",
@@ -101,13 +101,11 @@ const primaryFees = [
   ["P3 - P4", "Math", "2 hrs / week", "$248"],
   ["P5 - P6", "English", "2 hrs / week", "$288"],
   ["P5 - P6", "Math", "2 hrs / week", "$288"],
-  ["P5 - P6", "Science", "2 hrs / week", "$288"],
 ];
 
 const secondaryFees = [
   ["Sec 1 - 2", "English", "2 hrs / week", "$308"],
   ["Sec 1 - 2", "Math", "2 hrs / week", "$308"],
-  ["Sec 1 - 2", "Science", "2 hrs / week", "$308"],
   ["Sec 3 - 4", "English", "2 hrs / week", "$348"],
   ["Sec 3 - 4", "E Math", "2 hrs / week", "$348"],
   ["Sec 3 - 4", "A Math", "2 hrs / week", "$368"],
@@ -175,6 +173,15 @@ const ProgrammeTable = ({ icon, title, columns, rows }) => {
 
 const Programme = () => {
   const location = useLocation();
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    mobile: "",
+    email: "",
+    course: "",
+    level: "",
+    message: "",
+  });
 
   useEffect(() => {
     if (location.hash === "#enquire") {
@@ -182,6 +189,54 @@ const Programme = () => {
       element?.scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
+
+  const sendEmail = async (e) => {
+  e.preventDefault();
+
+  setLoading(true);
+
+  try {
+    const response = await fetch("/.netlify/functions/sendemail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.message || "Failed to send email");
+    }
+
+    alert("Email sent successfully!");
+
+    // Reset the form
+    setFormData({
+      name: "",
+      mobile: "",
+      email: "",
+      course: "",
+      level: "",
+      message: "",
+    });
+
+  } catch (err) {
+    console.error("Full error:", err);
+    alert(err.message);
+  } finally {
+    setLoading(false);
+  }
+};
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   return (
     <section className="our-programme-section mt-5">
       <Container>
@@ -403,7 +458,7 @@ const Programme = () => {
 
           </div>
           <div className="enquiry-form-card mx-auto">
-            <Form>
+            <Form onSubmit={sendEmail}>
               {/* Name */}
               <Form.Group className="mb-3">
                 <Form.Label className="mini-label text-start">Name</Form.Label>
@@ -411,6 +466,10 @@ const Programme = () => {
                   type="text"
                   placeholder="John Tan"
                   className="custom-input"
+                  name="name"
+    placeholder="John Tan"
+    value={formData.name}
+    onChange={handleChange}
                   required
                 />
               </Form.Group>
@@ -420,6 +479,9 @@ const Programme = () => {
                 <Form.Label className="mini-label text-start">Mobile Number</Form.Label>
                 <Form.Control
                   type="tel"
+                  name="mobile"
+    value={formData.mobile}
+    onChange={handleChange}
                   placeholder="e.g. 8080 9898"
                   className="custom-input"
                   required
@@ -433,6 +495,9 @@ const Programme = () => {
                   type="email"
                   placeholder="example@mail.com"
                   className="custom-input"
+                  name="email"
+    value={formData.email}
+    onChange={handleChange}
                   required
                 />
               </Form.Group>
@@ -440,7 +505,9 @@ const Programme = () => {
               {/* Courses */}
               <Form.Group className="mb-3">
                 <Form.Label className="mini-label text-start">Courses</Form.Label>
-                <Form.Select className="custom-input" required>
+                <Form.Select className="custom-input" required name="course"
+    value={formData.course}
+    onChange={handleChange}>
                   <option>Select a Course</option>
                   <option>Primary School</option>
                   <option>Secondary School</option>
@@ -453,6 +520,9 @@ const Programme = () => {
                 <Form.Label className="mini-label text-start">Your Children Education Level</Form.Label>
                 <Form.Control
                   type="text"
+                  name="level"
+                  value={formData.level}
+                  onChange={handleChange}
                   placeholder="Pri 1 - JC"
                   className="custom-input"
                   required
@@ -466,13 +536,16 @@ const Programme = () => {
                   as="textarea"
                   rows={4}
                   placeholder="Write your message..."
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   className="custom-input"
                 />
               </Form.Group>
 
               {/* Submit Button */}
-              <Button className="enquire-btn w-100">
-                Submit <BsSend />
+              <Button className="enquire-btn w-100" type="submit">
+                {loading ? "Sending..." : <>Submit <BsSend /></>}
               </Button>
             </Form>
           </div>

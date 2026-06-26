@@ -35,7 +35,7 @@ function HowWeTeach() {
 
           <div className="col-lg-6" data-aos="fade-left">
             <img
-              src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=700&q=80"
+              src="/section.png"
               alt="Classroom"
               className="ab-teach-img"
             />

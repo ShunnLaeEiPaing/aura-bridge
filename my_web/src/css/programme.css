@@ -56,6 +56,7 @@ body {
 /* Top Programme Hero */
 .programme-hero-section {
   padding: 24px 0 44px;
+  margin-top: 4rem;
 }
 
 .programme-hero-content {
@@ -627,7 +628,7 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .section-title-main,
   .enquiry-title,
   .cta-dark-box h2 {
@@ -712,5 +713,202 @@ body {
 
   .cta-dark-box {
     padding: 36px 16px;
+  }
+} */
+/* ======================================
+   RESPONSIVE FIXES
+====================================== */
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.programme-hero-image {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.students-badge {
+  max-width: 100%;
+  min-width: unset;
+  box-sizing: border-box;
+}
+
+.fees-grid {
+  width: 100%;
+}
+
+.programme-table {
+  min-width: 650px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ======================================
+   TABLET
+====================================== */
+@media (max-width: 991px) {
+  .section-title-main,
+  .enquiry-title {
+    font-size: 2.2rem;
+  }
+
+  .programme-hero-title {
+    font-size: 2.8rem;
+    line-height: 1.1;
+  }
+
+  .programme-hero-content {
+    max-width: 100%;
+  }
+
+  .students-badge {
+    left: 10px;
+    bottom: -15px;
+  }
+
+  .discount-row {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .benefits-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======================================
+   MOBILE
+====================================== */
+@media (max-width: 767px) {
+
+  .our-programme-section {
+    padding: 15px 0 40px;
+  }
+
+  .programme-hero-section {
+    padding: 15px 0 25px;
+  }
+
+  .programme-hero-title {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+
+  .programme-hero-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .section-title-main {
+    font-size: 1.8rem;
+  }
+
+  .enquiry-title {
+    font-size: 1.9rem;
+  }
+
+  .programme-hero-image {
+    min-height: 250px;
+  }
+
+  .students-badge {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .students-badge h4 {
+    font-size: 1.3rem;
+  }
+
+  .pillar-card {
+    padding: 20px;
+  }
+
+  .pillar-title {
+    font-size: 1.2rem;
+  }
+
+  .difference-item {
+    padding: 18px;
+  }
+
+  .programme-table-header {
+    padding: 14px;
+  }
+
+  .programme-table-header h3 {
+    font-size: 1rem;
+  }
+
+  .programme-table thead th,
+  .programme-table tbody td {
+    padding: 10px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .fee-cell {
+    text-align: center;
+  }
+
+  .discount-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .discount-label,
+  .discount-value {
+    font-size: 0.95rem;
+  }
+
+  .enquiry-form-card {
+    padding: 1.2rem;
+  }
+
+  .programme-btn-dark,
+  .programme-btn-light {
+    width: 100%;
+  }
+}
+
+/* ======================================
+   EXTRA SMALL PHONES
+====================================== */
+@media (max-width: 480px) {
+
+  .programme-hero-title {
+    font-size: 1.7rem;
+  }
+
+  .section-title-main {
+    font-size: 1.5rem;
+  }
+
+  .enquiry-title {
+    font-size: 1.6rem;
+  }
+
+  .students-badge {
+    padding: 12px;
+  }
+
+  .programme-table {
+    min-width: 550px;
   }
 }
