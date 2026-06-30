@@ -44,14 +44,6 @@ const Purpose = () => {
               Our mission is not simply to improve grades. Our mission is to help 
               every student become the best version of themselves.
             </p>
-            
-            {/* <img 
-              src="./students.png"
-              alt="Student studying"
-              className="purpose-image d-none d-lg-block"
-              data-aos="zoom-in"
-              data-aos-delay="300"
-            /> */}
             <p className="purpose-text mt-5">
               At Aura Bridge, we don't believe in memorising answers. We focus on every students understand why. When understanding improves,
               confidence grows.

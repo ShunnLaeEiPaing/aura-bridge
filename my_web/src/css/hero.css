@@ -4,7 +4,7 @@
   background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
 }
 .hero-title {
-  font-size: clamp(2rem, 5vw, 3.5rem); /* Dynamically scales font */
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -30,7 +30,7 @@
 .hero-description {
   font-size: 1.1rem;
   margin-bottom: 2rem;
-  max-width: 100%; /* Better for mobile */
+  max-width: 100%;
 }
 .btn-assessment {
   background: var(--dark-blue);
@@ -39,6 +39,7 @@
   padding: 1rem 2rem;
   display: inline-flex;
   align-items: center;
+  text-decoration: none;
   gap: 0.75rem;
   border: none;
 }
@@ -54,7 +55,7 @@
   font-weight: 500;
   margin-bottom: 1.5rem;
 }
-/* Hero Features Grid */
+
 .hero-features {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -63,13 +64,10 @@
 }
 
 .feature-item {
-  /* Remove these */
   background: transparent;
   padding: 0;
   border-radius: 0;
   box-shadow: none;
-
-  /* Keep these */
   text-align: center;
 }
 

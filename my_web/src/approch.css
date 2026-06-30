@@ -1,5 +1,3 @@
-/* ================= HERO ================= */
-
 .ab-hero {
   background: linear-gradient(135deg, var(--bg-light) 0%, #eef0f8 100%);
   padding: 120px 20px;
@@ -43,6 +41,7 @@
   color: #fff;
   border: none;
   border-radius: 10px;
+  text-decoration: none;
   padding: 14px 28px;
   font-weight: 700;
   font-size: 1rem;
@@ -52,8 +51,6 @@
 .ab-btn-assess:hover {
   background: #d97706;
 }
-
-/* ================= DARK BANNER ================= */
 
 .ab-dark-banner {
   background: var(--dark-blue);
@@ -94,8 +91,6 @@
   background: #d97706;
 }
 
-/* ================= PROMISE ================= */
-
 .ab-promise {
   background: var(--dark-blue);
   padding: 60px 20px;
@@ -130,8 +125,6 @@
   font-weight: 500;
 }
 
-/* ================= QUOTE ================= */
-
 .ab-quote {
   background: var(--bg-card);
   padding: 80px 20px;
@@ -150,8 +143,6 @@
 .ab-quote-body {
   font-size: 0.97rem;
 }
-
-/* ================= HOW WE TEACH ================= */
 
 .ab-teach {
   background: var(--bg-card);
@@ -207,8 +198,6 @@
     height:auto;
     object-fit:contain;
 }
-
-/* ================= RESULTS ================= */
 
 .ab-results {
   background: #f4f5fb;
@@ -282,8 +271,6 @@
   margin-top: 4px;
 }
 
-/* ================= APPROACH HERO ================= */
-
 .ab-approach-hero {
   background: var(--bg-light);
   padding: 120px 20px;
@@ -344,7 +331,6 @@
   gap: 0.75rem;
   animation: float 3s ease-in-out infinite;
 }
-/* ================= 5-STEP ================= */
 
 .ab-steps {
   background: var(--bg-card);
@@ -394,8 +380,6 @@
   margin: 0 auto;
 }
 
-/* ================= RESPONSIVE ================= */
-
 @media (max-width: 768px) {
   .ab-hero h1 {
     font-size: 1.8rem;
@@ -430,5 +414,18 @@
     width: 100%;
     max-width: 350px;
     height: auto;
+  }
+
+  .ab-stat-label {
+    font-size: 0.7rem;
+    line-height: 1.3;
+  }
+
+  .ab-stat {
+    font-size: 1rem;
+  }
+
+  .ab-results-card {
+    padding: 1rem;
   }
 }

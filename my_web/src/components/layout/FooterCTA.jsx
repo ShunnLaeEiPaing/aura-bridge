@@ -20,7 +20,7 @@ function Footer() {
         </p>
         <Button
           as={Link}
-          to="/programme#enquire"
+          to="./programme#enquire"
           className="cta-yellow-btn"
         >
           ENROL NOW <BsArrowRight />

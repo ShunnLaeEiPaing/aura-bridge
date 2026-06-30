@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { FaUsers, FaBook, FaStar, FaTrophy, FaArrowRight } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi';
 import '../css/hero.css'
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -26,10 +27,10 @@ const Hero = () => {
               potential and achieving results that last.
             </p>
 
-            <button className="btn-assessment">
+            <Link to="/programme#enquire" className="btn-assessment">
               Book a Free Assessment
               <FaArrowRight className="arrow" />
-            </button>
+            </Link>
 
             <div className="hero-features">
               <div className="feature-item">

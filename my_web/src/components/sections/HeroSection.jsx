@@ -1,5 +1,6 @@
 import React from 'react';
 import {Container} from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
 function HeroSection() {
   return (
@@ -8,7 +9,7 @@ function HeroSection() {
       <div className="container text-center">
         <h1>Let's Bridge the Gap. <span className="ab-purple">Together.</span></h1>
         <p className="ab-hero-sub">We're here to support your child's journey every step of the way.</p>
-        <button className="ab-btn-assess mt-3">Book a Free Assessment &nbsp;→</button>
+        <Link to="/programme#enquire" className="ab-btn-assess mt-5">Book a Free Assessment &nbsp;→</Link>
       </div>
       </Container>
     </section>

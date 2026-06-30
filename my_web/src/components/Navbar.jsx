@@ -41,7 +41,7 @@ const Navbar = () => {
             <Nav.Link as={Link} to="/approach" className="nav-link-custom">
             Our Approach
             </Nav.Link>
-            <Nav.Link href="#book" className="btn-book ms-lg-3 mt-2 mt-lg-0 text-center">Book Now</Nav.Link>
+            <Nav.Link as={Link} to="/programme#enquire" className="btn-book ms-lg-3 mt-2 mt-lg-0 text-center">Book Now</Nav.Link>
           </Nav>
         </BsNavbar.Collapse>
       </Container>

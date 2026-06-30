@@ -211,8 +211,6 @@ const Programme = () => {
     }
 
     alert("Email sent successfully!");
-
-    // Reset the form
     setFormData({
       name: "",
       mobile: "",
@@ -240,7 +238,6 @@ const Programme = () => {
   return (
     <section className="our-programme-section mt-5">
       <Container>
-        {/* Top Hero Section */}
         <div className="programme-hero-section">
           <Row className="align-items-center g-5">
             <Col lg={6} data-aos="fade-right">
@@ -298,8 +295,6 @@ const Programme = () => {
             </Col>
           </Row>
         </div>
-
-        {/* Programme Pillars */}
         <div className="mb-5 mt-4" id="programme-pillars">
           <p className="section-kicker">THE FOUNDATION</p>
           <h2 className="section-title-main mb-4">Programme Pillars</h2>
@@ -341,8 +336,6 @@ const Programme = () => {
             ))}
           </Row>
         </div>
-
-        {/* Kinetic Difference */}
         <div className="difference-section text-center py-5">
           <p className="section-kicker">WHY CHOOSE US</p>
           <h2 className="section-title-main mb-5">The Kinetic Difference</h2>
@@ -367,8 +360,6 @@ const Programme = () => {
             ))}
           </Row>
         </div>
-
-        {/* Programme Fees */}
         <div className="fees-section py-5">
           <p className="section-kicker">INVESTMENT</p>
           <h2 className="section-title-main">Programme Fees</h2>
@@ -408,8 +399,6 @@ const Programme = () => {
 
           </div>
         </div>
-
-        {/* Family Discounts */}
         <div className="discount-section py-5">
           <Row className="align-items-center g-5">
             <Col lg={5} data-aos="fade-right">
@@ -445,8 +434,6 @@ const Programme = () => {
             </Col>
           </Row>
         </div>
-
-        {/* CTA / Enquiry */}
         <div className="enquiry-section py-5" id="enquire">
           <div className="enquiry-wrapper text-center" data-aos="fade-up">
             <div className="journey-pill">Begin The Journey</div>
@@ -459,7 +446,6 @@ const Programme = () => {
           </div>
           <div className="enquiry-form-card mx-auto">
             <Form onSubmit={sendEmail}>
-              {/* Name */}
               <Form.Group className="mb-3">
                 <Form.Label className="mini-label text-start">Name</Form.Label>
                 <Form.Control
@@ -473,8 +459,6 @@ const Programme = () => {
                   required
                 />
               </Form.Group>
-
-              {/* Mobile Number */}
               <Form.Group className="mb-3">
                 <Form.Label className="mini-label text-start">Mobile Number</Form.Label>
                 <Form.Control
@@ -487,8 +471,6 @@ const Programme = () => {
                   required
                 />
               </Form.Group>
-
-              {/* Email */}
               <Form.Group className="mb-3">
                 <Form.Label className="mini-label text-start">Email</Form.Label>
                 <Form.Control
@@ -501,8 +483,6 @@ const Programme = () => {
                   required
                 />
               </Form.Group>
-
-              {/* Courses */}
               <Form.Group className="mb-3">
                 <Form.Label className="mini-label text-start">Courses</Form.Label>
                 <Form.Select className="custom-input" required name="course"
@@ -514,8 +494,6 @@ const Programme = () => {
                   <option>Exam Preparation</option>
                 </Form.Select>
               </Form.Group>
-
-              {/* Children Education Level */}
               <Form.Group className="mb-3">
                 <Form.Label className="mini-label text-start">Your Children Education Level</Form.Label>
                 <Form.Control
@@ -528,8 +506,6 @@ const Programme = () => {
                   required
                 />
               </Form.Group>
-
-              {/* Additional Information */}
               <Form.Group className="mb-4">
                 <Form.Label className="mini-label text-start">Additional Information</Form.Label>
                 <Form.Control
@@ -542,8 +518,6 @@ const Programme = () => {
                   className="custom-input"
                 />
               </Form.Group>
-
-              {/* Submit Button */}
               <Button className="enquire-btn w-100" type="submit">
                 {loading ? "Sending..." : <>Submit <BsSend /></>}
               </Button>
@@ -551,7 +525,6 @@ const Programme = () => {
           </div>
         </div>
 
-        {/* Final CTA Banner */}
         <div className="final-cta py-4" data-aos="zoom-in">
           <div className="benefits-row">
             <div className="benefit-item">

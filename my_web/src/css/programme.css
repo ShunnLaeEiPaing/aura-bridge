@@ -53,7 +53,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Top Programme Hero */
 .programme-hero-section {
   padding: 24px 0 44px;
   margin-top: 4rem;
@@ -219,7 +218,6 @@ body {
   letter-spacing: 2px;
 }
 
-/* Programme pillars */
 .pillar-card {
   position: relative;
   border-radius: 24px;
@@ -231,7 +229,6 @@ body {
   overflow: hidden;
 }
 
-/* subtle decorative background shape */
 .pillar-card::before {
   content: "";
   position: absolute;
@@ -243,7 +240,6 @@ body {
   z-index: 0;
 }
 
-/* content stays above decoration */
 .pillar-card * {
   position: relative;
   z-index: 1;
@@ -257,7 +253,6 @@ body {
   text-transform: uppercase;
   border-left: 3px solid #e7c22e;
 }
-/* TITLE */
 .pillar-title {
   font-size: 1.8rem;
   font-weight: 800;
@@ -266,7 +261,6 @@ body {
   line-height: 1.2;
 }
 
-/* TAGS */
 .pillar-tag {
   display: inline-flex;
   align-items: center;
@@ -280,7 +274,6 @@ body {
   color: #475569;
 }
 
-/* DESCRIPTION */
 .pillar-description {
   margin-top: 14px;
   font-size: 1rem;
@@ -288,7 +281,6 @@ body {
   margin-bottom: 18px;
 }
 
-/* LEARN MORE (ONLY HOVER HERE) */
 .learn-more-link {
   display: inline-flex;
   align-items: center;
@@ -352,7 +344,6 @@ body {
   color: #333;
 }
 
-/* Difference */
 .difference-item {
   text-align: center;
   padding: 24px;
@@ -384,7 +375,6 @@ body {
   margin: 0;
 }
 
-/* Tables */
 .programme-table-card {
   background: #fff;
   border: 1px solid #e8ecf4;
@@ -435,7 +425,6 @@ body {
   text-align: right;
 }
 
-/* Discounts */
 .discount-note {
   display: inline-flex;
   align-items: center;
@@ -503,7 +492,6 @@ body {
   color: #ffb400;
 }
 
-/* Enquiry */
 .enquiry-wrapper {
   padding: 10px 0;
 }
@@ -560,7 +548,7 @@ body {
 }
 
 .custom-input:focus {
-  border-color: #0d1b2a; /* dark blue */
+  border-color: #0d1b2a; 
   box-shadow: 0 0 0 0.2rem rgba(13, 27, 42, 0.25);
 }
 
@@ -584,8 +572,6 @@ body {
   opacity: 0.9;
 }
 
-
-/* Final CTA */
 .final-cta {
   padding-bottom: 0;
 }
@@ -627,98 +613,6 @@ body {
   font-size: 0.92rem;
 }
 
-/* Responsive */
-/* @media (max-width: 991px) {
-  .section-title-main,
-  .enquiry-title,
-  .cta-dark-box h2 {
-    font-size: 2.2rem;
-  }
-
-  .programme-hero-title {
-    font-size: 3rem;
-  }
-
-  .programme-hero-image {
-    height: 420px;
-  }
-
-  .students-badge {
-    left: 18px;
-    bottom: -18px;
-  }
-
-  .benefits-row {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 767px) {
-  .our-programme-section {
-    padding: 18px 0 40px;
-  }
-
-  .programme-block {
-    padding: 32px 0;
-  }
-
-  .programme-hero-title {
-    font-size: 2.4rem;
-  }
-
-  .programme-hero-text,
-  .section-description,
-  .pillar-description,
-  .difference-card p,
-  .cta-subtext {
-    font-size: 0.95rem;
-  }
-
-  .programme-hero-image {
-    height: 340px;
-  }
-
-  .students-badge {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    margin-top: 14px;
-    min-width: auto;
-    width: fit-content;
-  }
-
-  .pillar-image {
-    height: 180px;
-  }
-
-  .discount-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .enquiry-form-card {
-    padding: 20px;
-  }
-
-  .top-line {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .inline-select {
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .cta-dark-box {
-    padding: 36px 16px;
-  }
-} */
-/* ======================================
-   RESPONSIVE FIXES
-====================================== */
-
 html,
 body {
   overflow-x: hidden;
@@ -756,9 +650,6 @@ img {
   -webkit-overflow-scrolling: touch;
 }
 
-/* ======================================
-   TABLET
-====================================== */
 @media (max-width: 991px) {
   .section-title-main,
   .enquiry-title {
@@ -789,9 +680,6 @@ img {
   }
 }
 
-/* ======================================
-   MOBILE
-====================================== */
 @media (max-width: 767px) {
 
   .our-programme-section {
@@ -887,9 +775,6 @@ img {
   }
 }
 
-/* ======================================
-   EXTRA SMALL PHONES
-====================================== */
 @media (max-width: 480px) {
 
   .programme-hero-title {
